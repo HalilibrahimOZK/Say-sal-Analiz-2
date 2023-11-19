@@ -1,4 +1,4 @@
-# Fonksiyon tanımı
+
 def f(x):
     return x ** 3 + 4 * x ** 2 - 10
 
@@ -18,7 +18,7 @@ def bisection_method(a, b, tolerans):
         print(f"Iterasyon {iterasyon + 1}: a = {a}, b = {b}, c = {c}, f(c) = {fc}")
 
         if fc == 0:
-            return c  # Kök bulundu
+            return c 
         elif f(a) * fc < 0:
             b = c
         else:
@@ -26,7 +26,7 @@ def bisection_method(a, b, tolerans):
 
         iterasyon += 1
 
-    return (a + b) / 2  # Yaklaşık kökü döndür
+    return (a + b) / 2  
 
 
 
@@ -34,10 +34,10 @@ a = 1
 b = 2
 tolerans = 1e-6
 
-# İkiye bölme yöntemini uygula
+
 root = bisection_method(a, b, tolerans)
 
-# Sonucu ekrana yazdır
+
 if root is not None:
     print(f"Bulunan kök: {root}")
 else:
